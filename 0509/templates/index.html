@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <link rel='stylesheet', href={{ url_for('static',
+    filename='css/index.css')}}>
+  </head>
+  <body>
+    <div id="wrap">
+      <div>
+        <div class="news">
+          <form action="/result" method="POST">
+            <div class="form-group">
+              <h1>키워드 입력</h1>
+              <label for="exampleInputEmail1">크롤링 키워드</label>
+              <input
+                type="text"
+                class="form-control"
+                name="input1"
+                placeholder="키워드를 입력해주세요"
+              />
+            </div>
+            <div class="form-group">
+              <h1>페이지 입력</h1>
+              <label for="exampleInputPassword1">페이지 수 </label>
+              <input
+                type="number"
+                class="form-control"
+                name="input2"
+                placeholder="페이지수 를 입력해주세요"
+              />
+            </div>
+            <button type="submit" class="btn btn-default">제출</button>
+          </form>
+        </div>
+      </div>
+      <div>
+        <div class="naver">
+          <form action="/naver_shopping" method="POST">
+            <h1>네이버 쇼핑크롤링</h1>
+            <div class="form-group">
+              <input type="text" name="input3" class="form-control" />
+            </div>
+            <button class="btn btn-default">네이버 쇼핑 크롤링 셀레니움</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
